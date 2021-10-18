@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>길림양행 갈아엎기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+        /* font-family: 'Paytone One', sans-serif; */
+        @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+        /* font-family: 'Sigmar One', cursive; */
+        @font-face {
+            font-family: 'ChosunGu';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a{text-decoration: none; color: #333;}
+        li{list-style-type: none;}
+
+        section {
+            width: 100%;
+            height: 1000px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section h1 {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            font-size: 100px;
+            color: white;
+        }
+
+        section:nth-child(1) {
+            background-image: url(./img/mainImg.jpg);
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        
+       
+        section:nth-child(5) {
+            background-color: #84c1bb;
+        }
+
+        header {
+            position: fixed;
+            width: 50px;
+            top: 50%;
+            left: 2%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        header ul li {
+            width: 30px;
+            margin: 20px 0px;
+        }
+
+        header a {
+            display: block;
+            height: 25px;
+            width: 25px;
+            line-height: 30px;
+            background-color: whitesmoke;
+            border-radius: 100%;
+            margin: auto;
+        }
+
+        a.on {
+            background-color: #3e2309;
+        }
+
+    /* section01 */
+        .logo{
+            position: fixed;
+            left: 20px;
+            top: 0px;
+            z-index: 99;
+        }
+
+        section:nth-child(2) {
+            background-color: #F4C01F;
+            background-image: url(./img/honeyBg.png);
+            background-size: cover;
+            position: relative;
+        }
+
+        .almond{
+            width: 30%;
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+            z-index: 99;
+        }
+
+        .almond img{
+            width: 77%;
+            margin: auto;
+            display: block;
+        }
+
+        .almondText{
+            width: 30%;
+            height: 550px;
+            position: absolute;
+            bottom: 20%;
+            right: 15%;
+            z-index: 5;
+        }
+
+        .title{
+            font-size: 60px;
+            font-family: 'Sigmar One', cursive;
+            letter-spacing: -0.05em;
+            color: #3e2309;
+            line-height: 110%;
+        }
+
+        .content{
+            font-family: 'ChosunGu';
+            font-size: 23px;
+            line-height: 140%;
+            margin-top: 40px;
+            font-weight: 700;
+            color: #3e2309;
+        }
+
+        .line{
+            width: 150px;
+            height: 6px;
+            background-color: #fdeba9;
+            margin-top: 40px;
+        }
+
+        .gram{
+            font-size: 45px;
+            color: #3e2309;
+            font-family: 'Paytone One', sans-serif;
+            letter-spacing: -0.02em;
+            margin-top: 25px;
+        }
+
+        .percent{
+            font-size: 17px;
+            font-family: 'ChosunGu';
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .honeyIist img{
+            width: 60px;
+            position: absolute;
+        }
+
+        .honeyIist img:first-of-type{
+            width: 50px;
+            top: 180px;
+            left: 140px;
+            transform: rotate(-30deg);
+        }
+
+        img:nth-of-type(2){
+            top: 370px;
+            left: 350px;
+            transform: rotate(10deg);
+            width: 60px;
+        }
+        
+        img:nth-of-type(3){
+            top: 800px;
+            left: 360px;
+            transform: rotate(350deg);
+            width: 80px;
+        }
+        
+        img:nth-of-type(4){
+            top: 100px;
+            left: 350px;
+            transform: rotate(-90deg);
+            width: 80px;
+        }
+        
+        img:nth-of-type(5){
+            top: 500px;
+            left: 140px;
+            transform: rotate(80deg);
+            width: 110px;
+        }
+        
+        img:nth-of-type(6){
+            top: 780px;
+            left: 120px;
+            transform: rotate(0deg);
+            width: 65px;
+        }
+        
+        img:nth-of-type(7){
+            top: 100px;
+            left: 900px;
+            transform: rotate(0deg);
+            width: 90px;
+        }
+        
+        img:nth-of-type(8){
+            top: 400px;
+            left: 920px;
+            transform: rotate(-30deg);
+            width: 60px;
+        }
+        
+        img:nth-of-type(9){
+            top: 850px;
+            left: 900px;
+            transform: rotate(-260deg);
+            width: 70px;
+        }
+
+        .circle{
+            width: 800px;
+            height: 800px;
+            background-color: #fdeba9;
+            border-radius: 100%;
+            position: absolute;
+            right: -250px;
+            bottom: -250px;
+            z-index: 4;
+        }
+
+        /* #box3 */
+        section:nth-child(3) {
+            background-color: #21672b;
+            background-image: url(./img/laverBg.png);
+            background-size: cover;
+        }
+
+        #box3 .title{
+            color: whitesmoke;
+        }
+        
+        #box3 .content, #box3 .gram ,#box3 .percent{
+            color: white;
+            font-weight: 400;
+        }
+
+        #box3 .circle,
+        #box3 .line{
+            background-color: #2f4e2e;
+        }
+
+        #box3 .bg01,
+        #box3 .bg02{
+            width: 80px;
+        }
+
+        #box3 .bg05,
+        #box3 .bg07{
+            width: 60px;
+        }
+
+
+    /* box04 */
+        section:nth-child(4) {
+            background-color: #bb5e1e;
+            background-image: url(./img/caramelBg.png);
+            background-repeat: no-repeat;
+            
+        }
+
+        #box4 .bg04{
+            transform: rotate(30deg);
+        }
+
+        #box4 .bg05{
+            transform: rotate(0deg);
+            width: 90px;
+        }
+
+        #box4 .bg07{
+            transform: rotate(180deg);
+        }
+        #box4 .bg09{
+            transform: rotate(-20deg);
+        }
+
+        #box4 .circle,
+        #box4 .line{
+            background-color: #cf8a5b;
+        }
+
+        /* box5 */
+
+        section:nth-child(5) {
+            background-color: #84c1bb;
+            background-image: url(./img/mintBg.png);
+            background-repeat: no-repeat;
+        }
+        
+        #box5 .almond img{
+            width: 82%;
+        }
+
+        #box5 .title{
+            color: #594528;
+        }
+        
+        #box5 .content, #box5 .gram ,#box5 .percent{
+            color: white;
+            font-weight: 400;
+        }
+
+
+        #box5 .circle,
+        #box5 .line{
+            background-color: #594528;
+        }
+
+        #box5 .bg07{
+            width: 80px;
+        }
+
+        #box5 .bg08{
+            width: 90px;
+            transform: rotate(90deg);
+        }
+
+        #box5 .bg09{
+            transform: rotate(10deg);
+        }
+
+        /* box6 */
+        #box6{
+            background-color: forestgreen;
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+        $(function(){
+            //리플레시 될 때 맨 위로 가셈
+            $('html,body').stop().animate({'scrollTop': 0 },200);
+            
+            //1번 메뉴는 무조건 선택되게
+            $('header li').eq(0).find('a').addClass('on');
+            
+            
+            $(window).scroll(function(){
+                
+                $('section').mousewheel(function(event,delta){
+                //event.deltaY : 마우스를 아래로 내리면 -1, 마우스 휠을 위로 올리면 +1
+                    
+                var divNum = $(this).index();// 현재 사용하는 메뉴
+                    
+                 
+                    
+                if(delta<0){
+                    if(divNum>=5) return false;
+                    //section은 5개 index는 4까지 나오고 4이상의 section은 없으므로 다음으로 가지말고 멈추라는 뜻
+                    
+                    $('header a').removeClass('on')
+                 $('header li').eq(divNum+1).find('a').addClass('on');//  현재 사용하고 있는 섹션에 해당하는 메뉴를 색칠
+                    var w = new WOW().init();
+                    //51번째 라인에서 생성되서 괄호가 닫힐 때 사라지고 
+                    //다시 생성되는 과정으로 매번 애니메이션이 실행됨
+                    var n = $(this).next().offset().top;
+                    $('html,body').stop().animate({'scrollTop': n },1000);
+                    
+                }else if(delta>0){
+                    if(divNum<=0) return false;
+                    // section이 0번보다 작으면 더이상 움직이지 마세요
+                    
+                    $('header a').removeClass('on')
+                 $('header li').eq(divNum-1).find('a').addClass('on');//  현재 사용하고 있는 섹션에 해당하는 메뉴를 색칠
+                    var w = new WOW().init();
+                    var n = $(this).prev().offset().top;
+                    $('html,body').stop().animate({'scrollTop': n },1000);
+                }
+                
+            })
+            })
+            
+            $('header a').click(function(){
+                var w = new WOW().init();
+                var n = $(this).parent().index();
+                var sectionTop = $('section').eq(n).offset().top;
+                 /*$('html,body').stop().animate({'scrollTop': sectionTop },1000);*/
+                
+                 $('header a').removeClass('on')
+                 $('header li').eq(n).find('a').addClass('on');// 현재 사용하고 있는 섹션에 해당하는 메뉴를 색칠
+            })
+            
+            
+        })
+        $(function(){
+            var num = $(this).index()
+            $('#box2').on('mousemove', function(event) {
+            var posX = event.pageX;
+            var posY = event.pageY;
+            // 나누는 값에서 몫이 커질수록 마우스에서 거리가 멀어진다
+            console.log(event.pageY);
+            $('.bg01').css({
+                'left': 180 + (posX / 100),
+                'top': 140 + (posY / 100)
+            });
+            $('.bg02').css({
+                'left': 370 +(posX / -70),
+                'top': 350 + (posY / 150)
+            });
+            $('.bg03').css({
+                'left': 360 + (posX / 60),
+                'top': 800 + (posY / 100)
+            });
+            $('.bg04').css({
+                'left': 350 - (posX / 35),
+                'top': 100 + (posY / -50)
+            });
+            $('.bg05').css({
+                'left': 140 - (posX / -14),
+                'top': 500 + (posY / 50)
+            });
+            $('.bg06').css({
+                'left': 140 - (posX / 60),
+                'top': 780 + (posY / -100)
+            });
+            $('.bg07').css({
+                'left': 900 - (posX / 800),
+                'top': 70 + (posY / 30)
+            });
+            $('.bg08').css({
+                'left': 920 - (posX / 300),
+                'top': 400 + (posY / 40)
+            });
+            $('.bg09').css({
+                'left': 900 - (posX / 300 ),
+                'top': 850 + (posY / -85)
+            });
+
+        })
+
+        }) /*box2 마우스 인식*/
+        $(function(){
+            var num = $(this).index()
+            $('#box3').on('mousemove', function(event) {
+            var posX = event.pageX;
+            var posY = event.pageY;
+            // 나누는 값에서 몫이 커질수록 마우스에서 거리가 멀어진다
+            console.log(event.pageY);
+            $('.bg01').css({
+                'left': 180 + (posX / 100),
+                'top': 140 + (posY / 100)
+            });
+            $('.bg02').css({
+                'left': 370 +(posX / -70),
+                'top': 350 + (posY / 150)
+            });
+            $('.bg03').css({
+                'left': 360 + (posX / 60),
+                'top': 800 + (posY / 100)
+            });
+            $('.bg04').css({
+                'left': 350 - (posX / 35),
+                'top': 100 + (posY / -50)
+            });
+            $('.bg05').css({
+                'left': 140 - (posX / -14),
+                'top': 500 + (posY / 50)
+            });
+            $('.bg06').css({
+                'left': 140 - (posX / 60),
+                'top': 780 + (posY / -100)
+            });
+            $('.bg07').css({
+                'left': 900 - (posX / 800),
+                'top': 70 + (posY / 30)
+            });
+            $('.bg08').css({
+                'left': 920 - (posX / 300),
+                'top': 400 + (posY / 40)
+            });
+            $('.bg09').css({
+                'left': 900 - (posX / 300 ),
+                'top': 850 + (posY / -85)
+            });
+
+        })
+
+        }) /*box3 마우스 인식*/
+        $(function(){
+            var num = $(this).index()
+            $('#box4').on('mousemove', function(event) {
+            var posX = event.pageX;
+            var posY = event.pageY;
+            // 나누는 값에서 몫이 커질수록 마우스에서 거리가 멀어진다
+            console.log(event.pageY);
+            $('.bg01').css({
+                'left': 180 + (posX / 100),
+                'top': 140 + (posY / 100)
+            });
+            $('.bg02').css({
+                'left': 370 +(posX / -70),
+                'top': 350 + (posY / 150)
+            });
+            $('.bg03').css({
+                'left': 360 + (posX / 60),
+                'top': 800 + (posY / 100)
+            });
+            $('.bg04').css({
+                'left': 350 - (posX / 35),
+                'top': 100 + (posY / -50)
+            });
+            $('.bg05').css({
+                'left': 140 - (posX / -14),
+                'top': 500 + (posY / 50)
+            });
+            $('.bg06').css({
+                'left': 140 - (posX / 60),
+                'top': 780 + (posY / -100)
+            });
+            $('.bg07').css({
+                'left': 900 - (posX / 800),
+                'top': 70 + (posY / 30)
+            });
+            $('.bg08').css({
+                'left': 920 - (posX / 300),
+                'top': 400 + (posY / 40)
+            });
+            $('.bg09').css({
+                'left': 900 - (posX / 300 ),
+                'top': 850 + (posY / -85)
+            });
+
+        })
+
+        }) /*box4 마우스 인식*/
+
+        $(function(){
+            var num = $(this).index()
+            $('#box5').on('mousemove', function(event) {
+            var posX = event.pageX;
+            var posY = event.pageY;
+            // 나누는 값에서 몫이 커질수록 마우스에서 거리가 멀어진다
+            console.log(event.pageY);
+            $('.bg01').css({
+                'left': 180 + (posX / 100),
+                'top': 140 + (posY / 100)
+            });
+            $('.bg02').css({
+                'left': 370 +(posX / -70),
+                'top': 350 + (posY / 150)
+            });
+            $('.bg03').css({
+                'left': 360 + (posX / 60),
+                'top': 800 + (posY / 100)
+            });
+            $('.bg04').css({
+                'left': 350 - (posX / 35),
+                'top': 100 + (posY / -50)
+            });
+            $('.bg05').css({
+                'left': 140 - (posX / -14),
+                'top': 500 + (posY / 50)
+            });
+            $('.bg06').css({
+                'left': 140 - (posX / 60),
+                'top': 780 + (posY / -100)
+            });
+            $('.bg07').css({
+                'left': 900 - (posX / 800),
+                'top': 70 + (posY / 30)
+            });
+            $('.bg08').css({
+                'left': 920 - (posX / 300),
+                'top': 400 + (posY / 40)
+            });
+            $('.bg09').css({
+                'left': 900 - (posX / 300 ),
+                'top': 850 + (posY / -85)
+            });
+
+        })
+
+        }) /*box4 마우스 인식*/
+    </script>
+</head>
+
+<body>
+    <section id="box1">
+        <img src="./img/logo.png" alt="로고" class="logo">
+    </section>
+    <section id="box2">
+        <div class="honeyIist">
+            <img src="./img/honeyImg01.png" alt="허니버터 아몬드 캐릭터" class="bg01">
+            <img src="./img/honeyImg02.png" alt="허니버터 아몬드 캐릭터" class="bg02">
+            <img src="./img/honeyImg03.png" alt="허니버터 아몬드 캐릭터" class="bg03">
+            <img src="./img/honeyImg04.png" alt="허니버터 아몬드 캐릭터" class="bg04">
+            <img src="./img/honeyImg05.png" alt="허니버터 아몬드 캐릭터" class="bg05">
+            <img src="./img/honeyImg04.png" alt="허니버터 아몬드 캐릭터" class="bg06">
+            <img src="./img/honeyImg05.png" alt="허니버터 아몬드 캐릭터" class="bg07">
+            <img src="./img/honeyImg01.png" alt="허니버터 아몬드 캐릭터" class="bg08">
+            <img src="./img/honeyImg04.png" alt="허니버터 아몬드 캐릭터" class="bg09">
+        </div>
+        <div class="almond">
+            <img src="./img/honeyAlmond.png" alt="허니버터 아몬드">
+        </div>
+        <div class="almondText">
+            <p class="title">HONEY BUTTER <br> ALMOND</p>
+            <p class="content">국산 사양 벌꿀과 호주산 버터가 만나<br> 
+                고소하고 짭짤한맛인 HBAF 시그니처<br>
+                허니버터 아몬드를 드셔보세요 
+            </p>
+            <div class="line"></div>
+            <p class="gram">210g</p>
+            <p class="percent">아몬드 73.345%, 사양벌꿀 0.979%, 가공버터 0.491%</p>
+        </div>
+        <div class="circle"></div>
+    </section>
+    <section id="box3">
+        <div class="honeyIist">
+            <img src="./img/laverImg01.png" alt="김맛 아몬드 캐릭터" class="bg01">
+            <img src="./img/laverImg02.png" alt="김맛 아몬드 캐릭터" class="bg02">
+            <img src="./img/laverImg03.png" alt="김맛 아몬드 캐릭터" class="bg03">
+            <img src="./img/laverImg04.png" alt="김맛 아몬드 캐릭터" class="bg04">
+            <img src="./img/laverImg05.png" alt="김맛 아몬드 캐릭터" class="bg05">
+            <img src="./img/laverImg04.png" alt="김맛 아몬드 캐릭터" class="bg06">
+            <img src="./img/laverImg05.png" alt="김맛 아몬드 캐릭터" class="bg07">
+            <img src="./img/laverImg01.png" alt="김맛 아몬드 캐릭터" class="bg08">
+            <img src="./img/laverImg04.png" alt="김맛 아몬드 캐릭터" class="bg09">
+        </div>
+        <div class="almond">
+            <img src="./img/laverAlmond.png" alt="김맛 아몬드">
+        </div>
+        <div class="almondText">
+            <p class="title">LAVER <br> ALMOND</p>
+            <p class="content">정성스럽게 구운 김맛의 아몬드는<br>
+                시원한 맥주와 환상의 궁합을 자랑해요<br>
+                짭짤하고 고소한 김맛 아몬드를 드셔보세요 
+            </p>
+            <div class="line"></div>
+            <p class="gram">210g</p>
+            <p class="percent">아몬드 71.861%, 김 0.622%</p>
+        </div>
+        <div class="circle"></div>
+    </section>
+    <section id="box4">
+        <div class="honeyIist">
+            <img src="./img/caramelImg01.png" alt="프레첼 아몬드 일러스트" class="bg01">
+            <img src="./img/caramelImg02.png" alt="프레첼 아몬드 일러스트" class="bg02">
+            <img src="./img/caramelImg03.png" alt="프레첼 아몬드 일러스트" class="bg03">
+            <img src="./img/caramelImg04.png" alt="프레첼 아몬드 일러스트" class="bg04">
+            <img src="./img/caramelImg02.png" alt="프레첼 아몬드 일러스트" class="bg05">
+            <img src="./img/caramelImg01.png" alt="프레첼 아몬드 일러스트" class="bg06">
+            <img src="./img/caramelImg03.png" alt="프레첼 아몬드 일러스트" class="bg07">
+            <img src="./img/caramelImg01.png" alt="프레첼 아몬드 일러스트" class="bg08">
+            <img src="./img/caramelImg02.png" alt="프레첼 아몬드 일러스트" class="bg09">
+        </div>
+        <div class="almond">
+            <img src="./img/caramelAlmond.png" alt="카라멧 아몬드">
+        </div>
+        <div class="almondText">
+            <p class="title">CARAMEL & PRETZEL <br> ALMOND</p>
+            <p class="content">자꾸만 손이가는 단짠단짠의 정석,<br>
+                카라멜과 프레첼의 조합은 맛이 없을 수 <br>
+                없는 단짝조합이에요 미니프레첼을 가득<br>
+                담은 카라멜 프레첼 아몬드를 드셔보세요  
+            </p>
+            <div class="line"></div>
+            <p class="gram">210g</p>
+            <p class="percent">아몬드 42.487%, 소금 1.449%, 카라멜분말 0.219% <br> [카라멜분말 베이스 85%, 카라멜 액상 59.38%] </p>
+        </div>
+        <div class="circle"></div>
+    </section>
+    <section id="box5">
+        <div class="honeyIist">
+            <img src="./img/mintImg01.png" alt="프레첼 아몬드 일러스트" class="bg01">
+            <img src="./img/mintImg02.png" alt="프레첼 아몬드 일러스트" class="bg02">
+            <img src="./img/mintImg03.png" alt="프레첼 아몬드 일러스트" class="bg03">
+            <img src="./img/mintImg04.png" alt="프레첼 아몬드 일러스트" class="bg04">
+            <img src="./img/mintImg03.png" alt="프레첼 아몬드 일러스트" class="bg05">
+            <img src="./img/mintImg01.png" alt="프레첼 아몬드 일러스트" class="bg06">
+            <img src="./img/mintImg01.png" alt="프레첼 아몬드 일러스트" class="bg07">
+            <img src="./img/mintImg03.png" alt="프레첼 아몬드 일러스트" class="bg08">
+            <img src="./img/mintImg02.png" alt="프레첼 아몬드 일러스트" class="bg09">
+        </div>
+        <div class="almond">
+            <img src="./img/mintchocoAlmond.png" alt="카라멧 아몬드">
+        </div>
+        <div class="almondText">
+            <p class="title">MINT CHOCO <br> ALMOND</p>
+            <p class="content">자꾸만 손이가는 단짠단짠의 정석,<br>
+                카라멜과 프레첼의 조합은 맛이 없을 수 <br>
+                없는 단짝조합이에요 미니프레첼을 가득<br>
+                담은 카라멜 프레첼 아몬드를 드셔보세요  
+            </p>
+            <div class="line"></div>
+            <p class="gram">210g</p>
+            <p class="percent">아몬드 42.487%, 소금 1.449%, 카라멜분말 0.219% <br> [카라멜분말 베이스 85%, 카라멜 액상 59.38%] </p>
+        </div>
+        <div class="circle"></div>
+    </section>
+    <section id="box6">
+        
+    </section>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#box1"></a></li>
+                <li><a href="#box2"></a></li>
+                <li><a href="#box3"></a></li>
+                <li><a href="#box4"></a></li>
+                <li><a href="#box5"></a></li>
+                <li><a href="#box6"></a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
